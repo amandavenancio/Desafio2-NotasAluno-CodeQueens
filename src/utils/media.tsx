@@ -1,0 +1,1 @@
+export const media = (nota1: number, nota2: number, nota3: number) => ((nota1 + nota2 + nota3) / 3);
