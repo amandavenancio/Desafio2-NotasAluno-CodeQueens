@@ -19,11 +19,11 @@ export type ButtonProps = {
   children: React.ReactNode;
 };
 
-const VerificaButton: React.FC<ButtonProps> = ({onClick, children, disabled}) => (
-  <VerfButton 
-    onClick={onClick} 
+const VerificaButton: React.FC<ButtonProps> = ({ onClick, children, disabled }) => (
+  <VerfButton
+    onClick={onClick}
     disabled={disabled}>
-      {children}
+    {children}
   </VerfButton>
 );
 

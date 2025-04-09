@@ -44,7 +44,7 @@ const VerificadorAprovacao = () => {
 
   const handleIdade = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-      // Permite apenas números e um ponto
+    // Permite apenas números e um ponto
     if (/^\d*\.?\d*$/.test(value)) {
       const num = parseFloat(value);
       if (num > 0 && num <= 110 || value === "") {
@@ -58,11 +58,11 @@ const VerificadorAprovacao = () => {
     setNota: React.Dispatch<React.SetStateAction<string>>
   ) => {
     const value = e.target.value;
-  
+
     // Permite apenas números com ponto ou vírgula e vazio (para apagar)
     if (/^\d*\.?\d*$/.test(value)) {
       const num = parseFloat(value);
-  
+
       // Só atualiza se o valor for entre 0 e 10 ou campo vazio
       if ((num >= 0 && num <= 10) || value === "") {
         setNota(value);
@@ -92,50 +92,49 @@ const VerificadorAprovacao = () => {
   };
 
   return (
-  <Container>
-    <Title>Verificador de Aprovação</Title>
-    <InputAluno 
-      value={name} 
-      onChange={handleName} 
-      placeholder="Digite o nome do aluno"
-    />
-    <InputIdade
-      value={idade}
-      onChange={handleIdade}
-      placeholder="Digite a idade"
-    />
-    <InputNota
-      nota1={nota1}
-      nota2={nota2}
-      nota3={nota3}
-      onChangeNota1={(e) => handleNota(e, setNota1)}
-      onChangeNota2={(e) => handleNota(e, setNota2)}
-      onChangeNota3={(e) => handleNota(e, setNota3)}
-    />
+    <Container>
+      <Title>Verificador de Aprovação</Title>
+      <InputAluno
+        value={name}
+        onChange={handleName}
+        placeholder="Digite o nome do aluno"
+      />
+      <InputIdade
+        value={idade}
+        onChange={handleIdade}
+        placeholder="Digite a idade"
+      />
+      <InputNota
+        nota1={nota1}
+        nota2={nota2}
+        nota3={nota3}
+        onChangeNota1={(e) => handleNota(e, setNota1)}
+        onChangeNota2={(e) => handleNota(e, setNota2)}
+        onChangeNota3={(e) => handleNota(e, setNota3)}
+      />
 
-    <VerificaButton 
-      onClick={verificar}
-      disabled={!name || !idade || !nota1 || !nota2 || !nota3}
-    >
-      Verificar
-    </VerificaButton>
+      <VerificaButton
+        onClick={verificar}
+        disabled={!name || !idade || !nota1 || !nota2 || !nota3}
+      >
+        Verificar
+      </VerificaButton>
 
-    <ResetButton
-      onClick={handleClear}
-    >
-      Limpar
-    </ResetButton>
+      <ResetButton
+        onClick={handleClear}
+      >
+        Limpar
+      </ResetButton>
 
-    <ResultadosContainer> 
-      
-      {resultado && (
-        <>
-          <p style={{ marginTop: "20px" }}>Esse é o resultado do(a) aluno(a) {name}, {idade} anos: </p>
-          {resultado}
-        </>
-      )      }
-    </ResultadosContainer>
-  </Container>
+      <ResultadosContainer>
+        {resultado && (
+          <>
+            <p style={{ marginTop: "20px" }}>Esse é o resultado do(a) aluno(a) {name}, {idade} anos: </p>
+            {resultado}
+          </>
+        )}
+      </ResultadosContainer>
+    </Container>
   );
 }
 

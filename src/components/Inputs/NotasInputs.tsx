@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Input= styled.input `
+const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -48,6 +48,6 @@ const InputNota: React.FC<InputNotaProps> = ({
       placeholder="Nota 3"
     />
   </>
-); 
+);
 
 export default InputNota

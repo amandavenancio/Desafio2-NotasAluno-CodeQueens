@@ -15,8 +15,8 @@ const ClearButton = styled.button`
 `;
 
 export const ResetButton: React.FC<ButtonProps> = ({ onClick, children }) => (
-  <ClearButton 
-  onClick={onClick}>
+  <ClearButton
+    onClick={onClick}>
     {children}
   </ClearButton>
 );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Input= styled.input `
+const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -17,13 +17,13 @@ type InputAlunoProps = {
   placeholder: string;
 };
 
-const InputAluno: React.FC<InputAlunoProps> = ({ value, onChange, placeholder}) => (
+const InputAluno: React.FC<InputAlunoProps> = ({ value, onChange, placeholder }) => (
   <Input
-  type="string"
-  value={value}
-  onChange={onChange}
-  placeholder={placeholder}
+    type="string"
+    value={value}
+    onChange={onChange}
+    placeholder={placeholder}
   />
-); 
+);
 
 export default InputAluno
