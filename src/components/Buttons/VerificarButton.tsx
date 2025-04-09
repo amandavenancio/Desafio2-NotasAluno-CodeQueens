@@ -13,7 +13,7 @@ const VerfButton = styled.button`
   transition: background 0.3s;
 `;
 
-type ButtonProps = {
+export type ButtonProps = {
   onClick: () => void;
   disabled?: boolean;
   children: React.ReactNode;
