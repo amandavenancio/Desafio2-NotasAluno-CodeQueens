@@ -6,7 +6,7 @@ Este é um projeto React criado durante o desafio da CodeQueens, que permite ins
 
 ## 📸 Preview
 
-
+![image](https://github.com/user-attachments/assets/f827c921-bc66-4e27-a0ee-01eefb013a46)
 
 ---
 
