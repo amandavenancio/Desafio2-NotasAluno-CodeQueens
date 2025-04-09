@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# 🧑‍🎓 Verificador de Aprovação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto React criado durante o desafio da CodeQueens, que permite inserir o nome, idade e três notas de um aluno, calcula a média e exibe se o aluno foi aprovado ou reprovado.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Funcionalidades
+
+- Entrada do nome (apenas letras)
+- Entrada da idade (apenas números)
+- Notas entre 0 e 10
+- Cálculo automático da média das notas
+- Exibição do resultado com mensagem personalizada
+- Interface responsiva e estilizada com `styled-components`
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-components](https://styled-components.com/)
+- [Vite](https://vitejs.dev/) (para criação do projeto)
+
+---
+
+## 📦 Como rodar o projeto localmente
+
+### 1️⃣ **Clone o repositório**  
+```bash
+git clone https://github.com/amandavenancio/Desafio2-NotasAluno-CodeQueens
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 2️⃣ **Acesse a pasta do projeto**
+```sh
+cd nome-do-projeto
 ```
+
+### 3️⃣ **Instale as dependências**
+```sh
+npm install
+```
+
+### 4️⃣ **Inicie a aplicação**
+```sh
+npm run dev
+```
+
+## ✅ Regras de Validação
+- O nome só aceita letras e espaços (nada de números ou símbolos).
+- A idade aceita apenas números.
+- As notas precisam estar entre 0 e 10.
+- Só é possível clicar no botão "Verificar Aprovação" se todos os campos estiverem preenchidos corretamente.
+
+
+### 🙋‍♀️ Desenvolvido por
+Feito com 💜 por Amanda Venancio durante o Desafio da CodeQueens.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
